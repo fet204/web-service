@@ -2,17 +2,17 @@
 	"title": "Bond Films by Year",
 	"films":[
 			  {
-				"Film":1,
-				"Title":"Dr. No",
-				"Year":1962,
-				"Director":"Terence Young",
-				"Producers":"Harry Saltzman and Albert R. Broccoli",
-				"Writers":"Richard Maibaum, Johanna Harwood and Berkely Mather",
-				"Composer":"Monty Norman",
-				"Bond":"Sean Connery",
-				"Budget":"$1,000,000.00",
-				"BoxOffice":"$59,567,035.00",
-				"Image":"dr-no.jpg"
+          "Film":1,
+          "Title":"Dr. No",
+          "Year":1962,
+          "Director":"Terence Young",
+          "Producers":"Harry Saltzman and Albert R. Broccoli",
+          "Writers":"Richard Maibaum, Johanna Harwood and Berkely Mather",
+          "Composer":"Monty Norman",
+          "Bond":"Sean Connery",
+          "Budget":"$1,000,000.00",
+          "BoxOffice":"$59,567,035.00",
+          "Image":"dr-no.jpg"
 			  },
 			  {
 				"Film":2,
@@ -216,7 +216,7 @@
 				"Director":"Martin Campbell",
 				"Producers":"Michael G. Wilson and Barbara Broccoli",
 				"Writers":"Michael France, Jeffrey Caine, Kevin Wade and Bruce Feirstein",
-				"Composer":"Éric Serra",
+				"Composer":"ï¿½ric Serra",
 				"Bond":"Pierce Brosnan",
 				"Budget":"$42,000,000.00",
 				"BoxOffice":"$156,167,015.00",
