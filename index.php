@@ -3,7 +3,7 @@
 <title>Bond Web Service Demo</title>
 <style>
 body {font-family:georgia;}
-  .film{
+  .place{
     border:1px solid #E77DC2;
     border-radius: 5px;
     padding: 5px;
@@ -17,6 +17,10 @@ body {font-family:georgia;}
     top:10px;
   }
 
+  .pic img{
+	  max-width:100px;
+  }
+
 
   
 </style>
@@ -24,25 +28,15 @@ body {font-family:georgia;}
 
 <script type="text/javascript">
 
-function bondTemplate(film){
-  return `<div class="film">
-      <b>Film: </b> ${film.Film} <br/>
-      <b>Title:  </b> ${film.Title} <br/>
-      <b>Year: </b> ${film.Year} <br/>
-      <b>Director: </b> ${film.Director} <br/>
-      <b>Producers: </b> ${film.Producers} <br/>
-      <b>Writers: </b> ${film.Writers} <br/>
-      <b>Composer: </b> ${film.Composer} <br/>
-      <b>Bond: </b> ${film.Bond} <br/>
-      <b>Budget: </b> ${film.Budget} <br/>
-      <b>BoxOffice: </b> ${film.BoxOffice} <br/>
-      <div class="pic"><img src="thumbnails/${film.Image}" /></div>
+function placeTemplate(place){
+  return `<div class="place">
+      <b>Name: </b> ${place.Name} <br/>
+      <b>Location:  </b> ${place.Location} <br/>
+      <b>Rating: </b> ${place.Rating} <br/>
+      <b>Pros: </b> ${place.Pros} <br/>
+      <div class="pic"><img src="thumbnails/${place.Image}" /></div>
     </div>`;
 }
-
-
-
-
 
 
 
@@ -51,35 +45,33 @@ $(document).ready(function() {
   $('.category').click(function(e){
     e.preventDefault(); //stop default action of the link
     cat = $(this).attr("href");  //get category from URL
-    var request = $.ajax({
-    url: "api.php?cat=" + cat,
-    method: "GET",
-    dataType: "json"
-    });
     
+    var request = $.ajax({
+      url: "api.php?cat=" + cat,
+      method: "GET",
+      dataType: "json"
+    });
+
+    //MY STUFF START
     request.done(function( data ) {
       console.log(data);
       // title on page 
-      $("#filmtitle").html(data.title);
+      $("#placestitle").html(data.title);
 
-      //clears the previous films
-      $("#films").html("");
+      //clears the previous places
+      $("#places").html("");
 
-      //loops through films and adds to page
-      $.each(data.films,function(key, value){
-        let str = bondTemplate(value);
-
-        $("<div></div>").html(str).appendTo("#films");
-        
+      //loops through places and adds to page
+      $.each(data.places,function(key, value){
+        let str = placeTemplate(value);
+        $("<div></div>").html(str).appendTo("#places");
       });
 
-      // View JSON as a string 
-      /*
-      let myData = JSON.stringify(data , null , 4 );
-      myData = "<pre>" + myData + "</pre>"
-      $("#output").html(myData);
-      */
     });
+    //MY STUFF END
+    
+
+    
     request.fail(function(xhr, status, error) {
       //Ajax request failed.
       var errorMessage = xhr.status + ': ' + xhr.statusText
@@ -91,29 +83,16 @@ $(document).ready(function() {
 </script>
 </head>
   <body>
-  <h1>Bond Web Service</h1>
-    <a href="year" class="category">Bond Films By Year</a><br />
-    <a href="box" class="category">Bond Films By International Box Office Totals</a>
-    <h3 id="filmtitle">Title Will Go Here</h3>
-    <div id="films">
-      <p>Films will go here</p>
+  <h1>Cool Places Web Service</h1>
+    <a href="rating" class="category">Cool Places By Rating</a><br />
+    <a href="alpha" class="category">Cool Places By Alphabet</a>
+    
+    <h3 id="placestitle">Title Will Go Here</h3>
+    <div id="places">
+      <p>Places will go here</p>
     </div>
-    <!--
-    <div class="film">
-      <b>Film: </b> 1 <br/>
-      <b>Title:  </b> Dr. No <br/>
-      <b>Year: </b> 1962 <br/>
-      <b>Director: </b> Terence Young <br/>
-      <b>Producers: </b> Harry Saltzman and Albert R.       
-       Broccoli <br/>
-      <b>Writers: </b> Richard Maibaum, Johanna Harwood and Berkely Mather <br/>
-      <b>Composer: </b> Monty Norman <br/>
-      <b>Bond: </b> Sean Connery <br/>
-      <b>Budget: </b> $1,000,000.00 <br/>
-      <b>BoxOffice: </b> $59,567,035.00 <br/>
-      <div class="pic"><img src="thumbnails/dr-no.jpg" /></div>
-    </div>
-    -->
+    
     <div id="output">Results go here</div>
+    
   </body>
 </html>
