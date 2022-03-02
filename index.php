@@ -85,6 +85,9 @@ $(document).ready(function() {
   <h1>Cool Places Web Service</h1>
     <a href="rating" class="category">Cool Places By Rating</a><br />
     <a href="alpha" class="category">Cool Places By Alphabet</a>
+
+    <h3>Website Description: </h3>
+    <p>Hello! This website uses JSON to change data on a PHP page without having to go to a whole different HTML page</p>
     
     <h3 id="placestitle">Title Will Go Here</h3>
     <div id="places">
