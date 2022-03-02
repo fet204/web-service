@@ -19,6 +19,7 @@ body {font-family:georgia;}
 
   .pic img{
 	  max-width:100px;
+    max-height:64px;
   }
 
 
@@ -52,7 +53,6 @@ $(document).ready(function() {
       dataType: "json"
     });
 
-    //MY STUFF START
     request.done(function( data ) {
       console.log(data);
       // title on page 
@@ -68,7 +68,6 @@ $(document).ready(function() {
       });
 
     });
-    //MY STUFF END
     
 
     

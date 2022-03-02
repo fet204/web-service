@@ -28,7 +28,7 @@ if(isset($_REQUEST['cat']))
 {//check to be sure data has been transmitted via GET or POST
 	switch($_REQUEST['cat'])
 	{//determine contents of 'cat'
-		case "box":
+		case "alpha":
 			include('data/cool-places-by-alphabet.js'); //"box" orders by box office results
 			break;
 		default:

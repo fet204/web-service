@@ -6,14 +6,14 @@
     "Location":"New Zealand",
     "Rating":"10/10",
     "Pros":"Majestic landscapes!",
-    "Image":"pic.jpg"
+    "Image":"pictures/newZland.jpg"
     },
     {
     "Name":"Paris",
     "Location":"France",
     "Rating":"10/10",
     "Pros":"Is French",
-    "Image":"pic.jpg"
+    "Image":"pictures/paris.jpg"
 
     },
     {
@@ -21,7 +21,7 @@
     "Location":"Society Islands of French Polynesia",
     "Rating":"10/10",
     "Pros":"Sheer tropical beauty",
-    "Image":"pic.jpg"
+    "Image":"pictures/bora.jpg"
 
     },
     {
@@ -29,49 +29,49 @@
     "Location":"Hawaii",
     "Rating":"9/10",
     "Pros":"Pineapples!",
-    "Image":"pic.jpg"
+    "Image":"pictures/maui.jpg"
     },
     {
     "Name":"London",
     "Location":"United Kingdom",
     "Rating":"9/10",
     "Pros":"Biscuts and Crumpets",
-    "Image":"pic.jpg"
+    "Image":"pictures/london.jpg"
     },
     {
     "Name":"Rome",
     "Location":"Italy",
     "Rating":"9/10",
     "Pros":"The Roman Legion",
-    "Image":"pic.jpg"
+    "Image":"pictures/rome.jpg"
     },
     {
     "Name":"Tokyo",
     "Location":"Japan",
     "Rating":"9/10",
     "Pros":"Anime and Yakisoba",
-    "Image":"pic.jpg"
+    "Image":"pictures/tokyo.jpg"
     },
     {
     "Name":"Glacier National Park",
     "Location":"America",
     "Rating":"8/10",
     "Pros":"Winter activities",
-    "Image":"pic.jpg"
+    "Image":"pictures/GNC.jpg"
     },
     {
     "Name":"New York City",
     "Location":"America",
     "Rating":"8/10",
     "Pros":"I'm walking here",
-    "Image":"pic.jpg"
+    "Image":"pictures/NYC.jpg"
     },
     {
     "Name":"Grand Canyon",
     "Location":"America",
     "Rating":"8/10",
     "Pros":"Amazing sights",
-    "Image":"pic.jpg"
+    "Image":"pictures/grand.jpg"
     }
   ]
 }
